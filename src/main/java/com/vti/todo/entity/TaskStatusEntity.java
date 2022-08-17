@@ -6,15 +6,12 @@ import javax.persistence.*;
 
 @Entity
 @Data
-@Table(name = "work_spaces")
-public class WorkSpace {
+@Table(name = "task_status")
+public class TaskStatusEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     private String name;
-
-    @ManyToOne
-    private AccountEntity account;
 }

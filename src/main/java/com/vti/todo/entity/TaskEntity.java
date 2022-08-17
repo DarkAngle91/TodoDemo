@@ -5,7 +5,6 @@ import lombok.Data;
 
 import javax.persistence.*;
 import java.time.LocalDate;
-import java.util.Date;
 
 @Entity
 @Data
@@ -19,7 +18,7 @@ public class TaskEntity {
     private String title;
 
     @ManyToOne
-    private TaskStatus taskStatus;
+    private TaskStatusEntity taskStatus;
 
     private String description;
 
@@ -28,5 +27,5 @@ public class TaskEntity {
     private LocalDate dueDate;
 
     @ManyToOne
-    private WorkSpace workSpace;
+    private WorkSpaceEntity workSpace;
 }
